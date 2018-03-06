@@ -18,7 +18,8 @@ setTimeout(function () {
         text: "Simple JavaScript Toasts",
         gravity: "top",
         positionLeft: true,
-        backgroundColor: "#0f3443"
+        backgroundColor: "#0f3443",
+        avatar: 'https://randomuser.me/api/portraits/women/10.jpg'
     }).showToast();
 }, 1000);
 
