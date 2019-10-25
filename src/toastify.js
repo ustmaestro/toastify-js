@@ -282,19 +282,13 @@
     // Get all toast messages on the DOM
     var allToasts = document.getElementsByClassName("toastify");
 
-    var classUsed;
-
     // Modifying the position of each toast element
     for (var i = 0; i < allToasts.length; i++) {
-      // Getting the applied gravity
-      if (containsClass(allToasts[i], "toastify-top") === true) {
-        classUsed = "toastify-top";
-      } else {
-        classUsed = "toastify-bottom";
-      }
+      // Getting the applied gravity      
+      var classUsed = (containsClass(allToasts[i], "toastify-top") === true) ? "top" : "bottom";
 
       var height = allToasts[i].offsetHeight;
-      classUsed = classUsed.substr(9, classUsed.length-1)
+      
       // Spacing between toasts
       var offset = 15;
 
