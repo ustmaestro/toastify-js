@@ -201,12 +201,9 @@
       this.toastElement = this.buildToast();
 
       // Getting the root element to with the toast needs to be added
-      var rootElement;
-      if (typeof this.options.selector === "undefined") {
-        rootElement = document.body;
-      } else {
-        rootElement = document.getElementById(this.options.selector);
-      }
+      var rootElement = (this.options.selector === undefined) 
+        ? rootElement = document.body
+        : document.getElementById(this.options.selector);
 
       // Validating if root element is present in DOM
       if (!rootElement) {
